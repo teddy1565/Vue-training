@@ -3,7 +3,7 @@
     <h1>To-Do List</h1>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
-        <ToDoItem v-bind:label="item.label" v-bind:done="true"/>
+        <ToDoItem v-bind:label="item.label" v-bind:done="true" v-bind:id="item.id"/>
       </li>
     </ul>
   </div>
