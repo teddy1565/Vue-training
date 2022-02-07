@@ -18,6 +18,7 @@ export default {
                 return false;
             }
             this.$emit("todo-added",this.label);
+            this.label = "";
             // console.log("form submitted",this.label);
         }
     },
