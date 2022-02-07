@@ -1,10 +1,10 @@
 <template>
     <div>
-        <form @submit="onSubmit">
+        <form @submit.prevent="onSubmit">
             <label for="new-todo-input">
                 What needs to be done?
             </label>
-            <input type="text" id="new-todo-input" name="new-todo" autocomplete="off">
+            <input type="text" id="new-todo-input" name="new-todo" autocomplete="off" v-model="label">
             <button type="submit">Add</button>
         </form>
     </div>
@@ -14,8 +14,13 @@
 export default {
     methods: {
         onSubmit() {
-            console.log("form submitted");
+            console.log("form submitted",this.label);
         }
+    },
+    data() {
+        return {
+            label:""
+        };
     }
 };
 </script>
