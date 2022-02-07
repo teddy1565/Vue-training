@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>To-Do List</h1>
+    <ToDoForm/>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
         <ToDoItem v-bind:label="item.label" v-bind:done="true" v-bind:id="item.id"/>
@@ -12,13 +13,15 @@
 <script>
 
 import ToDoItem from "./components/ToDoItem.vue";
+import ToDoForm from "./components/ToDoForm.vue";
 import uniqueId from "lodash.uniqueid";
 
 
 export default {
   name: 'App',
   components: {
-    ToDoItem
+    ToDoItem,
+    ToDoForm
   },
   data() {
     return {
