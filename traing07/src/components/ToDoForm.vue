@@ -14,7 +14,11 @@
 export default {
     methods: {
         onSubmit() {
-            console.log("form submitted",this.label);
+            if (this.label === "") {
+                return false;
+            }
+            this.$emit("todo-added",this.label);
+            // console.log("form submitted",this.label);
         }
     },
     data() {

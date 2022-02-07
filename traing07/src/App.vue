@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>To-Do List</h1>
-    <ToDoForm/>
+    <ToDoForm @todo-added="addToDo"/>
     <ul>
       <li v-for="item in ToDoItems" v-bind:key="item.id">
         <ToDoItem v-bind:label="item.label" v-bind:done="true" v-bind:id="item.id"/>
@@ -48,6 +48,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    addToDo(toDoLabel) {
+      console.log("To-do added:",toDoLabel);
+    }
   }
 }
 </script>
