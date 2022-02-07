@@ -51,6 +51,12 @@ export default {
   },
   methods: {
     addToDo(toDoLabel) {
+      console.log(this);
+      this.ToDoItems.push({
+        id:uniqueId("todo-"),
+        label:toDoLabel,
+        done:false
+      });
       console.log("To-do added:",toDoLabel);
     }
   }
