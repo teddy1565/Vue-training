@@ -64,6 +64,20 @@ export default {
 </script>
 
 <style>
+/* Global styles */
+.btn {
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn__danger {
+  color: #fff;
+  background-color: #ca3c3c;
+  border-color:#bd2130;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
